@@ -20,21 +20,16 @@ def search_query(query, pdf_index):
 
         best_index = np.argmax(similarities)
         best_chunk = chunks[best_index]
-        best_similarity = similarities[best_index]  # Capture similarity score
+        best_similarity = similarities[best_index]  
 
         results.append((filename, best_chunk, best_similarity, best_index))
 
     return results
 
 def evaluate_results(results):
-    """
-    Evaluates the results and finds the most relevant content.
-    Returns the filename, the most relevant chunk, and its index.
-    """
     if not results:
         return None, None, None
 
-    # Sort by similarity score in descending order (most relevant first)
     results.sort(key=lambda x: x[2], reverse=True)
     
     most_relevant = results[0]  # Top result
