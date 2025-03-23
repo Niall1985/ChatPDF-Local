@@ -37,8 +37,9 @@ def generate_response(user_query, cleaned_text):
     for chunk in chunks:
         response = chain.invoke(
             {"user_query": user_query, "cleaned_text": chunk},
-            config={"max_tokens": 1000}  # Prevent output overflow
+            config={"max_tokens": 500} 
         )
         responses.append(response)
     
-    return "\n".join(responses)
+    return "\n".join(str(response) for response in responses)
+
