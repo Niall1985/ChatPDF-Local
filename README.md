@@ -57,7 +57,6 @@ Under the hood, it:
 ## 🔧 Future Improvements
 - [ ] **Memory** – Keep track of previous questions  
 - [ ] **Better Search** – Implement **semantic search** for improved accuracy  
-- [ ] **Multi-PDF Support** – Allow chatting with multiple PDFs  
 - [ ] **Deployment** – Deploy to **Streamlit Cloud**  
 
 ---
