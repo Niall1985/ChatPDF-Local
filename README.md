@@ -4,8 +4,7 @@
 ## 📌 Features
 ✅ **Upload PDF Files** – Supports user-uploaded PDFs  
 ✅ **Chat with Your PDFs** – Ask questions and get human-like responses  
-✅ **No External AI Required** – Uses TF-IDF for efficient retrieval  
-✅ **Fast & Lightweight** – Runs completely offline  
+✅ **Powered by LLaMA** – Uses a local LLaMA model for response generation  
 
 ---
 
@@ -21,8 +20,10 @@ cd ChatPDF-Local
 Install the required dependencies:
 
 ```sh
-pip install streamlit PyMuPDF scikit-learn
+pip install -r requirements.txt
 ```
+
+Ensure you have the necessary LLaMA model weights downloaded and placed in the correct directory.
 
 ---
 
@@ -42,20 +43,20 @@ Now, open [localhost:8501](http://localhost:8501) in your browser! 🎉
 
 1. **Upload a PDF** 📄  
 2. **Enter a question** ❓  
-3. **Chatbot finds the most relevant answer** 🔍  
-4. **Response is humanized and displayed** 💬  
+3. **Chatbot finds the most relevant answer using LLaMA** 🔍  
+4. **Response is generated and displayed** 💬  
 
 Under the hood, it:
-- Extracts text using **PyMuPDF**
-- Splits the text into chunks for **efficient retrieval**
-- Uses **TF-IDF similarity search** to find relevant content
-- Humanizes responses to make them more conversational  
+- Extracts text using **PyMuPDF**  
+- Splits the text into chunks for **efficient retrieval**  
+- Uses a **LLaMA-based language model** to generate responses  
+- Returns human-like responses based on the document's content  
 
 ---
 
 ## 🔧 Future Improvements
 - [ ] **Memory** – Keep track of previous questions  
-- [ ] **Better Search** – Implement **BM25** for improved accuracy  
+- [ ] **Better Search** – Implement **semantic search** for improved accuracy  
 - [ ] **Multi-PDF Support** – Allow chatting with multiple PDFs  
 - [ ] **Deployment** – Deploy to **Streamlit Cloud**  
 
@@ -65,7 +66,7 @@ Under the hood, it:
 - **Python** 🐍
 - **Streamlit** 🎨
 - **PyMuPDF (fitz)** 📄
-- **TF-IDF (Scikit-Learn)** 🔍  
+- **LLaMA Model** 🧠
 
 ---
 
@@ -78,3 +79,4 @@ Want to contribute? Feel free to **fork** the repository and submit a **pull req
 This project is licensed under the **MIT License**.  
 
 ---
+
