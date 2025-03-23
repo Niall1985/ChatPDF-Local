@@ -24,7 +24,7 @@ def generate_response(user_query, cleaned_text):
         - Ensure factual accuracy.
         - If no relevant content is found, respond with: "No relevant information found."
 
-        ### Return the extracted answer:
+        ### Return the extracted answer in a summarized form, and just return the content, don't return the meta-data like calls used etc:
     """
     
     pt = PromptTemplate.from_template(prompt)
